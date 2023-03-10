@@ -8,6 +8,7 @@ body {
 }
 
 pre {
+    background-color: #eeeeee;
     border:1px dotted #888888;
     padding: 20px;
     border-radius: 20px;
