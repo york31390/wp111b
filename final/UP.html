@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>終極密碼</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      flex-direction: column;
+      font-family: Arial, sans-serif;
+      background-image: url("3840x2160.png");
+      background-size: cover;
+      background-position: center;
+      color: rgba(98, 255, 0, 0.868);
+    }
+
+    h1{
+        padding: 100px 0;
+        color: blue;
+    }
+    
+    p, input{
+        width: 250px;
+        padding: 10px;
+        margin: 15px;
+    }
+    
+    button {
+      font-family: inherit;
+      color: inherit;
+    }
+
+    #result {
+      font-weight: bold;
+    }
+
+    .hint {
+      color: green;
+    }
+  </style>
+  <script src="script.js"></script>
+  <script>
+    function checkKeyPress(event) {
+      if (event.keyCode === 13) { // 按下 Enter 鍵的鍵碼是 13
+        checkGuess();
+      }
+    }
+  </script>
+</head>
+<body>
+  <h1>終極密碼遊戲</h1>
+  <p class="hint">提示：數字介於1和100之間</p>
+  <input type="number" id="guessInput" onkeypress="checkKeyPress(event)">
+  <button onclick="checkGuess()">猜！</button>
+  <p id="result"></p>
+</body>
+</html>
